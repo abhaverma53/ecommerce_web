@@ -1,0 +1,7 @@
+<h2>Your Cart</h2>
+  <ul>
+   <% @cart.products.each do |product| %>
+     <%= render partial: 'products/show', locals: { item: item } %>
+   <% end %>
+  </ul>
+

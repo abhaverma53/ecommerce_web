@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+  <% if @products.present? %>
+    <% @products.each do |product| %>
+      <h3>
+        <%= product.title %> -
+        <%= product.description %> -
+        <%= product.price %> -
+        <% if product.image.attached? %>
+          <%= image_tag product.image, class: 'product-image' %>
+        <% else %>
+          No image attached.
+        <% end %>
+        <%= link_to 'View', product %>
+      </h3>
+    <% end %>
+  <% else %>
+    <h2>No products available for this user.</h2>
+  <% end %>
+<% end %>
+
+
+  <%= link_to "vendors product", orders_path %><br>
+  <%= link_to "New Product added", new_vendor_path %>
+
+<%= button_to(
+    "Log Out",
+    destroy_vendor_session_path,
+    method: :delete
+  ) %>
+
+<% if user_signed_in? %>
+  <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+<%end%>

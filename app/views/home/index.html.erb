@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+ <div> Welcome <%= current_user.email %> </div>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %>
+<% end %>
+
+<%if user_signed_in?%>
+  <h1>Home index</h1>
+  <!-- link_to "show product", admin_user_path -->
+  <%= link_to "Show Product", admin_user_path(current_user) %>
+<%end%>

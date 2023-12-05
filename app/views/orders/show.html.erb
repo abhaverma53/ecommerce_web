@@ -1,0 +1,16 @@
+<h3>Placed order </h3>
+<ul>
+  <%if current_user.present? %>
+  <%byebug%>
+    <% @order.each do |order| %>
+      <h3> Quantity: <%= order.quantity %> - Status: <%= order.status %></h3>
+    <% end %>
+    <%else%>
+    <%byebug%>
+    <% @products.each do |product| %>
+      <h3> Title: <%= product.title %> - Price: <%= product.price %></h3>
+    <%end%>
+  <%end%>
+</ul>
+<%= link_to 'Back to Orders', orders_path %>
+<%= button_to('Log Out', destroy_user_session_path, method: :delete) %>

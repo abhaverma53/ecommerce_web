@@ -1,0 +1,19 @@
+<!-- app/views/vendors/index.html.erb -->
+
+<h1><%= @vendor.email %>'s Store</h1>
+
+<% if @vendor_products.any? %>
+  <ul>
+    <% @vendor_products.each do |product| %>
+      <li>
+        <%= product.title %> - <%= product.price %> - <%= image_tag product.image, class: 'product-image' %>
+        <%= link_to "View", vendor_path(@vendor) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No products available for this vendor.</p>
+<% end %>
+
+<%= link_to 'Back to Products', products_path %>
+<%= button_to('Log Out', destroy_vendor_session_path, method: :delete) %>

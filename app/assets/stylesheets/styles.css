@@ -1,0 +1,122 @@
+/* app/assets/stylesheets/styles.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+h1 {
+  color: #333;
+}
+
+/* Product List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Message Styles */
+.notice {
+  color: #28a745;
+}
+
+.alert {
+  color: #dc3545;
+}
+
+/* Product Details Styles */
+.product-details {
+  margin-top: 20px;
+}
+
+/* Order Styles */
+.order-details {
+  margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #666;
+}
+
+
+/* Product List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 10%; /* Set the desired width for the images */
+  height: 90px; /* Set the desired height for the images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 5px;
+}
+
+/* ... other styles ... */

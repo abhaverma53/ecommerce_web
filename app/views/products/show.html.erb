@@ -1,0 +1,28 @@
+<% if @product.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+    <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+
+  <p>Image attached: <%= @product.image.attached? ? 'Yes' : 'No' %></p>
+
+  <p>
+    Image:
+    <% if @product.image.attached? %>
+      <%= image_tag @product.image, class: 'product-image'%>
+    <% else %>
+      No image attached.
+    <% end %>
+  </p>
+  <%  byebug%>
+    <%= link_to "Place Order", order_path %><br>
+
+
+  <!-- link_to "Place Order", vendor_path(@product.vendor)  -->
+  <%= link_to "Back to products", products_path %>
+<% end %>

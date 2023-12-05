@@ -1,0 +1,16 @@
+<h1>User Profile</h1>
+
+<p>Email: <%= @user.email %></p>
+
+<h2>User Products</h2>
+<ul>
+  <% if user_signed_in? %>
+    <% if @user_products.any? %>
+      <% @user_products.each do |product| %>
+        <li><%= product.title %> - <%= product.description %> - <%= product.price %></li>
+      <% end %>
+    <% else %>
+      <li>No products available for this user.</li>
+    <% end %>
+  <%end%>
+</ul>
